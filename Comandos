@@ -1,4 +1,9 @@
 eas build --platform ios --profile production
 eas build -p android --profile preview
+eas build -p android --profile production
 npx expo start
 EAS_DEBUG=1 eas build --platform ios --profile production
+
+M14ppl3$
+
+eas device:create

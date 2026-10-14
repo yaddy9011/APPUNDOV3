@@ -1297,6 +1297,7 @@ const CotizacionAutosScreen = () => {
   );
 
 };
+
 const styles = StyleSheet.create({
   container: {
     padding: 0,

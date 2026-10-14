@@ -8,7 +8,7 @@ import {
   ActivityIndicator,
   TouchableOpacity,
   Text,
-  BackHandler
+  Platform 
 } from 'react-native';
 import { NavigationContainer, useNavigationState } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -112,8 +112,10 @@ export default function App() {
     });
 
     return () => {
-      Notifications.removeNotificationSubscription(notificationListener.current);
-      Notifications.removeNotificationSubscription(responseListener.current);
+        notificationListener.current?.remove();
+        responseListener.current?.remove();
+      // Notifications.removeNotificationSubscription(notificationListener.current);
+      // Notifications.removeNotificationSubscription(responseListener.current);
     };
 
   }, []);
